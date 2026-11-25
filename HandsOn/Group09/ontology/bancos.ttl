@@ -1,0 +1,37 @@
+@prefix mb: <http://bancos.madrid.linkeddata.es/ontology#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+<http://bancos.madrid.linkeddata.es/ontology> a owl:Ontology ; dct:title "Madrid Urban Benches Ontology"@en ; dct:publisher <https://www.madrid.es/> ; dct:license <https://creativecommons.org/licenses/by/4.0/> .
+mb:Bench a owl:Class ; rdfs:label "Bench"@en .
+mb:Street a owl:Class ; rdfs:label "Street"@en .
+mb:Neighborhood a owl:Class ; rdfs:label "Neighborhood"@en .
+mb:District a owl:Class ; rdfs:label "District"@en .
+mb:City a owl:Class ; rdfs:label "City"@en .
+mb:locatedInStreet a owl:ObjectProperty ; rdfs:domain mb:Bench ; rdfs:range mb:Street .
+mb:locatedInNeighborhood a owl:ObjectProperty ; rdfs:domain mb:Bench ; rdfs:range mb:Neighborhood .
+mb:belongsToDistrict a owl:ObjectProperty ; rdfs:domain mb:Neighborhood ; rdfs:range mb:District .
+mb:partOfCity a owl:ObjectProperty ; rdfs:domain mb:District ; rdfs:range mb:City .
+mb:benchId a owl:DatatypeProperty ; rdfs:domain mb:Bench ; rdfs:range xsd:string .
+mb:internalCode a owl:DatatypeProperty ; rdfs:domain mb:Bench ; rdfs:range xsd:string .
+mb:modelCode a owl:DatatypeProperty ; rdfs:domain mb:Bench ; rdfs:range xsd:string .
+mb:status a owl:DatatypeProperty ; rdfs:domain mb:Bench ; rdfs:range xsd:string .
+mb:contractCode a owl:DatatypeProperty ; rdfs:domain mb:Bench ; rdfs:range xsd:string .
+mb:installationDate a owl:DatatypeProperty ; rdfs:domain mb:Bench ; rdfs:range xsd:date .
+mb:streetNumber a owl:DatatypeProperty ; rdfs:domain mb:Bench ; rdfs:range xsd:string .
+mb:auxiliaryAddress a owl:DatatypeProperty ; rdfs:domain mb:Bench ; rdfs:range xsd:string .
+mb:postalCode a owl:DatatypeProperty ; rdfs:domain mb:Bench ; rdfs:range xsd:string .
+mb:ndpCode a owl:DatatypeProperty ; rdfs:domain mb:Bench ; rdfs:range xsd:string .
+mb:gisX a owl:DatatypeProperty ; rdfs:domain mb:Bench ; rdfs:range xsd:decimal .
+mb:gisY a owl:DatatypeProperty ; rdfs:domain mb:Bench ; rdfs:range xsd:decimal .
+mb:coordinateSystem a owl:DatatypeProperty ; rdfs:domain mb:Bench ; rdfs:range xsd:string .
+mb:latitude a owl:DatatypeProperty ; rdfs:domain mb:Bench ; rdfs:range xsd:decimal .
+mb:longitude a owl:DatatypeProperty ; rdfs:domain mb:Bench ; rdfs:range xsd:decimal .
+mb:streetType a owl:DatatypeProperty ; rdfs:domain mb:Street ; rdfs:range xsd:string .
+mb:streetName a owl:DatatypeProperty ; rdfs:domain mb:Street ; rdfs:range xsd:string .
+mb:neighborhoodCode a owl:DatatypeProperty ; rdfs:domain mb:Neighborhood ; rdfs:range xsd:string .
+mb:neighborhoodName a owl:DatatypeProperty ; rdfs:domain mb:Neighborhood ; rdfs:range xsd:string .
+mb:districtCode a owl:DatatypeProperty ; rdfs:domain mb:District ; rdfs:range xsd:string .
+mb:districtName a owl:DatatypeProperty ; rdfs:domain mb:District ; rdfs:range xsd:string .
+mb:cityName a owl:DatatypeProperty ; rdfs:domain mb:City ; rdfs:range xsd:string .

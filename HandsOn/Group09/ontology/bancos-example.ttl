@@ -1,0 +1,43 @@
+@prefix mb: <http://bancos.madrid.linkeddata.es/ontology#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+<http://bancos.madrid.linkeddata.es/resource/city/madrid> a mb:City ; rdfs:label "Madrid"@es ; mb:cityName "Madrid" .
+<http://bancos.madrid.linkeddata.es/resource/district/15> a mb:District ; rdfs:label "CIUDAD LINEAL"@es ; mb:districtCode "15" ; mb:districtName "CIUDAD LINEAL" ; mb:partOfCity <http://bancos.madrid.linkeddata.es/resource/city/madrid> .
+<http://bancos.madrid.linkeddata.es/resource/neighborhood/152> a mb:Neighborhood ; rdfs:label "PUEBLO NUEVO"@es ; mb:neighborhoodCode "152" ; mb:neighborhoodName "PUEBLO NUEVO" ; mb:belongsToDistrict <http://bancos.madrid.linkeddata.es/resource/district/15> .
+<http://bancos.madrid.linkeddata.es/resource/street/calle-ezequiel-solana> a mb:Street ; rdfs:label "CALLE EZEQUIEL SOLANA"@es ; mb:streetType "CALLE" ; mb:streetName "EZEQUIEL SOLANA" .
+<http://bancos.madrid.linkeddata.es/resource/bench/100005> a mb:Bench ;
+    rdfs:label "Banco 100005"@es ;
+    mb:benchId "100005" ;
+    mb:internalCode "4043005" ;
+    mb:modelCode "MU-16" ;
+    mb:status "OPERATIVO" ;
+    mb:contractCode "MU24" ;
+    mb:installationDate "2016-09-01"^^xsd:date ;
+    mb:streetNumber "41" ;
+    mb:auxiliaryAddress "PARCELA" ;
+    mb:postalCode "28017" ;
+    mb:ndpCode "11105576" ;
+    mb:gisX "445287.84"^^xsd:decimal ;
+    mb:gisY "4475796.86"^^xsd:decimal ;
+    mb:coordinateSystem "ETRS89" ;
+    mb:locatedInStreet <http://bancos.madrid.linkeddata.es/resource/street/calle-ezequiel-solana> ;
+    mb:locatedInNeighborhood <http://bancos.madrid.linkeddata.es/resource/neighborhood/152> .
+<http://bancos.madrid.linkeddata.es/resource/neighborhood/151> a mb:Neighborhood ; rdfs:label "VENTAS"@es ; mb:neighborhoodCode "151" ; mb:neighborhoodName "VENTAS" ; mb:belongsToDistrict <http://bancos.madrid.linkeddata.es/resource/district/15> .
+<http://bancos.madrid.linkeddata.es/resource/street/calle-jose-luis-de-arrese> a mb:Street ; rdfs:label "CALLE JOSE LUIS DE ARRESE"@es ; mb:streetType "CALLE" ; mb:streetName "JOSE LUIS DE ARRESE" .
+<http://bancos.madrid.linkeddata.es/resource/bench/100007> a mb:Bench ;
+    rdfs:label "Banco 100007"@es ;
+    mb:benchId "100007" ;
+    mb:internalCode "4043007" ;
+    mb:modelCode "MU-16" ;
+    mb:status "OPERATIVO" ;
+    mb:contractCode "MU24" ;
+    mb:installationDate "2014-10-01"^^xsd:date ;
+    mb:streetNumber "14" ;
+    mb:auxiliaryAddress "PORTAL" ;
+    mb:postalCode "28017" ;
+    mb:ndpCode "11103492" ;
+    mb:gisX "444298.865"^^xsd:decimal ;
+    mb:gisY "4474761.649"^^xsd:decimal ;
+    mb:coordinateSystem "ETRS89" ;
+    mb:locatedInStreet <http://bancos.madrid.linkeddata.es/resource/street/calle-jose-luis-de-arrese> ;
+    mb:locatedInNeighborhood <http://bancos.madrid.linkeddata.es/resource/neighborhood/151> .
